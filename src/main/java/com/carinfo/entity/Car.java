@@ -1,10 +1,10 @@
-package com.carinfo.domain;
+package com.carinfo.entity;
 
 import lombok.Data;
 import javax.persistence.*;
 
 @Entity
-@Table
+@Table(name = "cars")
 @Data
 public class Car {
     @Id
@@ -14,4 +14,6 @@ public class Car {
     private String model;
     private String gos_number;
     private int mileage;
+
+    private Long driverID;
 }
